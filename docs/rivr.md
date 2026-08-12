@@ -2,7 +2,7 @@
 
 ## ROVR / LightCone research toolkit
 
-RIVR is a personal, local-first research project by Tomas Abdias Martinez. It explores unsupported proprietary ROVR LightCone data and provides repeatable, read-only inspection and viewing workflows.
+RIVR is a personal, local-first research project by Tmtz. It explores unsupported proprietary ROVR LightCone data and provides repeatable, read-only inspection and viewing workflows.
 
 The project is concerned with understanding difficult digital artifacts without altering the source capture. It is not presented as a legal or workplace forensic tool.
 

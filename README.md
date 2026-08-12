@@ -1,6 +1,6 @@
 # Willow & Birdie Innovations — Public Technical Showcase
 
-**Tomas Abdias Martinez · Founder / Principal**
+**Tmtz · Founder / Principal**
 
 [Willow & Birdie Innovations](https://willowbirdie.com) is a technology research and development company focused on AI-assisted software development, digital forensics, data systems, and distributed computing infrastructure.
 
@@ -8,13 +8,15 @@ This repository is a public overview of selected research and product work. The 
 
 ## Selected work
 
-### [RIVR — ROVR / LightCone research toolkit](docs/rivr.md)
-
-A local-first, read-only toolkit for inspecting and viewing ROVR LightCone data, including LiDAR, camera, GNSS, IMU, timeline, and map-related artifacts.
-
 ### [APK Sentinel — deterministic APK triage](docs/apk-sentinel.md)
 
 A private, in-development project for evidence-backed static analysis of Android APKs. The planned service produces bounded, versioned JSON triage reports without installing or executing submitted APKs.
+
+## Evidence and validation
+
+- [APK Sentinel architecture](assets/apk-sentinel-architecture.svg)
+- [Sanitized APK Sentinel report](examples/apk-sentinel-sanitized-report.json)
+- [APK Sentinel validation notes](validation/apk-sentinel-validation.md)
 
 ## Technical themes
 
@@ -32,8 +34,7 @@ This repository intentionally contains documentation only. It does not contain p
 ## Links
 
 - [Willow & Birdie Innovations](https://willowbirdie.com)
-- [Tomas Abdias Martinez on GitHub](https://github.com/tmtz1)
-- [RIVR private repository](https://github.com/tmtz1/RIVR) — access restricted
+- [Project profile](https://github.com/tmtz1)
 
 ## Contact
 

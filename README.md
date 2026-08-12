@@ -18,6 +18,11 @@ A private, in-development project for evidence-backed static analysis of Android
 - [Sanitized APK Sentinel report](examples/apk-sentinel-sanitized-report.json)
 - [APK Sentinel validation notes](validation/apk-sentinel-validation.md)
 
+## Local inference research
+
+- [BirdieRog model benchmark](docs/local-inference-benchmark.md)
+- [Local chatbot honesty and modality bake-off](docs/local-inference-chat-results.md)
+
 ## Technical themes
 
 - Digital forensics and artifact analysis

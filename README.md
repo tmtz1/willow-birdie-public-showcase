@@ -8,9 +8,9 @@ This repository is a public overview of selected research and product work. The 
 
 ## Selected work
 
-### [APK Sentinel — deterministic APK triage](docs/apk-sentinel.md)
+### [APK Sentinel — AI-agent APK triage](docs/apk-sentinel.md)
 
-A private, in-development project for evidence-backed static analysis of Android APKs. The planned service produces bounded, versioned JSON triage reports without installing or executing submitted APKs.
+A limited beta for bounded, static-only Android APK triage. The live x402 endpoint accepts one APK per paid job and returns a versioned JSON report without installing or executing the sample. Automated agents and human operators can use the API directly; a browser upload portal is not part of this release.
 
 ## Evidence and validation
 
@@ -44,15 +44,3 @@ This repository intentionally contains documentation only. It does not contain p
 ## Contact
 
 [admin@willowbirdie.com](mailto:admin@willowbirdie.com)
-
----
-
-## Update — human-assisted API access
-
-APK Sentinel now has a human-assisted use path in addition to automated agent use. A person can submit an APK with a standard HTTP client such as `curl` or Postman, follow the x402 payment requirements, and poll the returned result. This is API access for a human operator—not a browser upload portal.
-
-The existing endpoint, price, Base Sepolia network, asynchronous `202 queued` workflow, static-analysis boundaries, and retention limits remain unchanged. Human operators should treat the returned report as triage evidence and review it before making decisions about an APK.
-
-### Hard lesson learned
-
-The paid API contract is asynchronous: a successful submission returns `202 queued`, not the final report. A client must retain the job ID and result token and poll the result endpoint. Infrastructure readiness matters just as much: a worker can fail closed when its container runtime is unavailable, even when the API and payment path are healthy.

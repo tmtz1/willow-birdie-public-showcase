@@ -1,46 +1,60 @@
-# Willow & Birdie Innovations — Public Technical Showcase
+# Willow & Birdie Innovations
 
-**Tmtz · Founder / Principal**
+**Research and engineering index**
 
-[Willow & Birdie Innovations](https://willowbirdie.com) is a technology research and development company focused on AI-assisted software development, digital forensics, data systems, and distributed computing infrastructure.
+Willow & Birdie Innovations is a technology research and development company focused on difficult digital systems: digital forensics, applied AI, evidence processing, data systems, automation, and distributed infrastructure.
 
-This repository is a public overview of selected research and product work. The production implementations remain private and proprietary.
+This repository is an index of public research and engineering records. Individual projects should have their own repository when they have enough substance to support a clear implementation, validation record, and public boundary.
 
-## Selected work
+## Current projects
 
-### [APK Sentinel — deterministic APK triage](docs/apk-sentinel.md)
+### [APK Sentinel](https://github.com/tmtz1/apk-sentinel)
 
-A private, in-development project for evidence-backed static analysis of Android APKs. The planned service produces bounded, versioned JSON triage reports without installing or executing submitted APKs.
+A deterministic, automation-friendly API for static Android APK triage. The repository contains the primary public evidence package, architecture, sanitized reports, validation notes, real-world hard cases, API contracts, and security boundaries.
 
-## Evidence and validation
+**Status:** Limited beta. **Endpoint:** `https://api.willowbirdie.com/v1/apk/triage`. **Payment:** x402 on the Base Sepolia testnet. **Availability:** the endpoint is available for bounded testing, while customer intake and support remain deployment-specific. This is API access, not a browser upload portal.
 
-- [APK Sentinel architecture](assets/apk-sentinel-architecture.svg)
-- [Sanitized APK Sentinel report](examples/apk-sentinel-sanitized-report.json)
-- [APK Sentinel validation notes](validation/apk-sentinel-validation.md)
+### Local inference reliability
 
-## Local inference research
+Measured research on local model serving, structured output, latency, context retention, prompt-injection resistance, and operational boundaries.
 
-- [BirdieRog model benchmark](docs/local-inference-benchmark.md)
-- [Local chatbot honesty and modality bake-off](docs/local-inference-chat-results.md)
+- [Model benchmark](docs/local-inference-benchmark.md)
+- [Chat and modality results](docs/local-inference-chat-results.md)
 
-## Technical themes
+### RIVR
 
-- Digital forensics and artifact analysis
-- Deterministic data processing
-- Evidence-backed reporting
-- Secure handling of untrusted files
-- Local-first and privacy-conscious tooling
-- Bounded infrastructure and reproducible validation
+A personal ROVR and LightCone parser toolkit documented as research and engineering work.
 
-## Public/private boundary
+- [RIVR project notes](docs/rivr.md)
 
-This repository intentionally contains documentation only. It does not contain production source code, private APK samples, proprietary detection logic, customer data, credentials, or deployment access.
+## How the work is organized
+
+Each public project is intended to make the following visible:
+
+1. Problem and product thesis
+2. Approach and architecture
+3. Validation and failure cases
+4. Current status and operational boundaries
+5. Sanitized public artifacts
+
+The company repository should point to those records. It should not become a second copy of every project README.
+
+## Engineering themes
+
+- Evidence over assertion
+- Determinism where repeatability matters
+- Explicit uncertainty and partial-analysis states
+- Fail-closed handling of unsupported or malformed input
+- Stable contracts for humans and software agents
+- Local and private processing where sensitive data requires it
+- Real inputs, regression tests, and cleanup as part of correctness
+
+## Public and private boundary
+
+The public repositories contain documentation, research records, sanitized examples, and non-sensitive architecture material. Production source code, private samples, customer data, credentials, wallet keys, queue state, and deployment access remain outside the public repositories.
 
 ## Links
 
 - [Willow & Birdie Innovations](https://willowbirdie.com)
-- [Project profile](https://github.com/tmtz1)
-
-## Contact
-
-[admin@willowbirdie.com](mailto:admin@willowbirdie.com)
+- [GitHub profile](https://github.com/tmtz1)
+- [Contact](mailto:admin@willowbirdie.com)

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">APK Sentinel static triage flow</title>
+  <desc id="desc">An APK is validated, analyzed in a bounded networkless boundary, schema validated, returned as JSON, and cleaned up.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070b10"/><stop offset="1" stop-color="#17101a"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f4b860"/></marker>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#382632" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="640" fill="url(#bg)"/><rect width="1200" height="640" fill="url(#grid)" opacity=".35"/>
+  <text x="60" y="62" fill="#e9f1f7" font-family="system-ui,sans-serif" font-size="30" font-weight="700">APK SENTINEL</text>
+  <text x="60" y="92" fill="#8fa2b3" font-family="system-ui,sans-serif" font-size="15" letter-spacing="2">BOUNDED, EVIDENCE-BACKED STATIC TRIAGE</text>
+  <rect x="100" y="150" width="1000" height="350" rx="18" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="10 8" opacity=".8"/>
+  <text x="125" y="184" fill="#fda4af" font-family="system-ui,sans-serif" font-size="14" letter-spacing="2">RESTRICTED ANALYSIS BOUNDARY · NO EXECUTION · NO NETWORK</text>
+  <g stroke="#f4b860" stroke-width="3" fill="none" marker-end="url(#arrow)"><path d="M235 335H300"/><path d="M455 335H520"/><path d="M675 335H740"/><path d="M895 335H960"/></g>
+  <g font-family="system-ui,sans-serif">
+    <g transform="translate(125 260)"><rect width="110" height="150" rx="14" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/><text x="19" y="53" fill="#e9f1f7" font-size="18" font-weight="700">APK</text><text x="19" y="82" fill="#8fa2b3" font-size="13">one file</text><text x="19" y="106" fill="#8fa2b3" font-size="13">bounded size</text></g>
+    <g transform="translate(300 260)"><rect width="155" height="150" rx="14" fill="#083344" stroke="#22d3ee" stroke-width="2"/><text x="18" y="48" fill="#e9f1f7" font-size="18" font-weight="700">Validate</text><text x="18" y="82" fill="#a5f3fc" font-size="13">ZIP / APK</text><text x="18" y="106" fill="#8fa2b3" font-size="13">path / size limits</text></g>
+    <g transform="translate(520 245)"><rect width="155" height="180" rx="14" fill="#881337" stroke="#fb7185" stroke-width="2"/><text x="18" y="48" fill="#e9f1f7" font-size="18" font-weight="700">Analyze</text><text x="18" y="82" fill="#fecdd3" font-size="13">static only</text><text x="18" y="106" fill="#8fa2b3" font-size="13">fresh job boundary</text><text x="18" y="130" fill="#8fa2b3" font-size="13">networkless</text></g>
+    <g transform="translate(740 260)"><rect width="155" height="150" rx="14" fill="#064e3b" stroke="#34d399" stroke-width="2"/><text x="18" y="48" fill="#e9f1f7" font-size="18" font-weight="700">Validate</text><text x="18" y="82" fill="#a7f3d0" font-size="13">JSON schema</text><text x="18" y="106" fill="#8fa2b3" font-size="13">evidence links</text></g>
+    <g transform="translate(960 260)"><rect width="110" height="150" rx="14" fill="#4c1d95" stroke="#a78bfa" stroke-width="2"/><text x="19" y="53" fill="#e9f1f7" font-size="18" font-weight="700">JSON</text><text x="19" y="82" fill="#ddd6fe" font-size="13">versioned</text><text x="19" y="106" fill="#8fa2b3" font-size="13">report</text></g>
+  </g>
+  <path d="M1070 430 C1070 470 1000 470 1000 520 H200 C150 520 125 485 125 450" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
+  <text x="500" y="560" fill="#fda4af" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">cleanup on success, timeout, cancellation, or failure</text>
+  <text x="60" y="610" fill="#f4b860" font-family="system-ui,sans-serif" font-size="14">PUBLIC DESCRIPTION · DYNAMIC EXECUTION AND PUBLIC INGRESS REMAIN SEPARATELY GATED</text>
+</svg>

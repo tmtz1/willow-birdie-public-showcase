@@ -4,7 +4,7 @@
 
 Willow & Birdie Innovations is a technology research and development company focused on difficult digital systems: digital forensics, applied AI, evidence processing, data systems, automation, and distributed infrastructure.
 
-This repository is an index of public research and engineering records. Individual projects should have their own repository when they have enough substance to support a clear implementation, validation record, and public boundary.
+This repository is an index of public research and engineering records. APK Sentinel is maintained in its own repository as the primary public product and evidence package.
 
 ## Current projects
 
@@ -37,7 +37,7 @@ Each public project is intended to make the following visible:
 4. Current status and operational boundaries
 5. Sanitized public artifacts
 
-The company repository should point to those records. It should not become a second copy of every project README.
+The company repository points to project-specific records without duplicating their full documentation.
 
 ## Engineering themes
 

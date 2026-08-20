@@ -76,7 +76,7 @@ Result:
 
 The result was to keep factual research separate from unverified local chat generation. A local model may summarize retrieved material, but it should not be treated as its own source of truth for niche or current facts.
 
-The recommended next step is bounded, read-only retrieval with citations, followed by another bake-off. No model gets promoted merely because it sounds convincing. That is how you end up publishing a perfectly formatted lie.
+The next tested direction was bounded, read-only retrieval with citations, followed by another bake-off. No model was promoted merely because it sounded convincing. That is how you end up publishing a perfectly formatted lie.
 
 ## Chatbot decision
 
@@ -99,9 +99,9 @@ Unsafe assumptions include:
 - assuming a larger or more expensive model automatically fixes hallucination;
 - allowing a local model to decide whether cloud escalation or sensitive routing is authorized.
 
-## What should be showcased
+## Public summary
 
-The honest public story is stronger than a clean leaderboard:
+The useful result is stronger than a clean leaderboard:
 
 1. The hardware was sufficient for useful local inference but constrained enough to expose real offload and latency tradeoffs.
 2. Several models passed the task matrix while still failing the separate honesty gate.

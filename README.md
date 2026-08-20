@@ -12,7 +12,7 @@ This repository is an index of public research and engineering records. Individu
 
 A deterministic, automation-friendly API for static Android APK triage. The repository contains the primary public evidence package, architecture, sanitized reports, validation notes, real-world hard cases, API contracts, and security boundaries.
 
-**Status:** Limited beta. **Endpoint:** `https://api.willowbirdie.com/v1/apk/triage`. **Payment:** x402 on the Base Sepolia testnet. **Availability:** the endpoint is available for bounded testing, while customer intake and support remain deployment-specific. This is API access, not a browser upload portal.
+**Status:** Limited beta. The documented endpoint is callable for bounded testing through x402 on Base Sepolia. This is API access, not a browser upload portal; general customer intake and support are not enabled. See the [canonical status record](https://github.com/tmtz1/apk-sentinel/blob/main/product-status.json).
 
 ### Local inference reliability
 

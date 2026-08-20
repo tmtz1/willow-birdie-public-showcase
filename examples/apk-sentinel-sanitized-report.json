@@ -1,0 +1,165 @@
+{
+  "components": {
+    "components": [
+      {
+        "exported_explicit": true,
+        "is_exported": true,
+        "kind": "activity",
+        "name": "com.example.apksentinelfixture.MainActivity"
+      },
+      {
+        "exported_explicit": true,
+        "is_exported": false,
+        "kind": "service",
+        "name": "com.example.apksentinelfixture.FixtureService"
+      }
+    ]
+  },
+  "findings": {
+    "findings": [
+      {
+        "evidence": [
+          "dalvik.system.DexClassLoader"
+        ],
+        "rule_id": "suspicious.dynamic_code_loading",
+        "severity": "high",
+        "title": "Dynamic code loading API referenced"
+      },
+      {
+        "evidence": [
+          "java.lang.Class.forName"
+        ],
+        "rule_id": "suspicious.reflection",
+        "severity": "medium",
+        "title": "Reflection API referenced"
+      },
+      {
+        "evidence": [
+          "java.lang.Runtime.exec"
+        ],
+        "rule_id": "suspicious.shell_execution",
+        "severity": "high",
+        "title": "Shell execution API referenced"
+      },
+      {
+        "evidence": [
+          "android.telephony.SmsManager"
+        ],
+        "rule_id": "suspicious.sms_telephony",
+        "severity": "medium",
+        "title": "SMS or telephony API referenced"
+      }
+    ]
+  },
+  "indicators": {
+    "indicators": [
+      {
+        "category": "dynamic_code_loading",
+        "evidence": [
+          "dalvik.system.DexClassLoader"
+        ]
+      },
+      {
+        "category": "reflection",
+        "evidence": [
+          "java.lang.Class.forName"
+        ]
+      },
+      {
+        "category": "shell_execution",
+        "evidence": [
+          "java.lang.Runtime.exec"
+        ]
+      },
+      {
+        "category": "sms_telephony",
+        "evidence": [
+          "android.telephony.SmsManager"
+        ]
+      }
+    ]
+  },
+  "package": {
+    "min_sdk": 24,
+    "package_name": "com.example.apksentinelfixture",
+    "target_sdk": 34,
+    "version_code": 123,
+    "version_name": "1.2.3"
+  },
+  "permissions": {
+    "permissions": [
+      {
+        "is_dangerous": false,
+        "name": "android.permission.INTERNET",
+        "protection_level": "normal|instant"
+      },
+      {
+        "is_dangerous": true,
+        "name": "android.permission.READ_SMS",
+        "protection_level": "dangerous"
+      },
+      {
+        "is_dangerous": true,
+        "name": "android.permission.RECORD_AUDIO",
+        "protection_level": "dangerous|instant"
+      },
+      {
+        "is_dangerous": true,
+        "name": "android.permission.SEND_SMS",
+        "protection_level": "dangerous"
+      }
+    ]
+  },
+  "risk_score": {
+    "contributions": [
+      {
+        "points": 20,
+        "rule_id": "suspicious.dynamic_code_loading"
+      },
+      {
+        "points": 10,
+        "rule_id": "suspicious.reflection"
+      },
+      {
+        "points": 25,
+        "rule_id": "suspicious.shell_execution"
+      },
+      {
+        "points": 15,
+        "rule_id": "suspicious.sms_telephony"
+      }
+    ],
+    "total": 70
+  },
+  "schema_version": "1.0",
+  "sha256": "3e8c613eb80202acc2c2122ec2ae3d4a86f6a4c44e117418c3518cb25d3b67d4",
+  "signing": {
+    "certificates": [
+      {
+        "hash_algorithm": "sha256",
+        "issuer": "Common Name: Fixture, Organizational Unit: Test, Organization: APK Sentinel, Locality: Nowhere, State/Province: NA, Country: XX",
+        "not_valid_after": "2026-08-11T22:43:41Z",
+        "not_valid_before": "2026-08-10T22:43:41Z",
+        "serial_number": "12225795398788230670",
+        "sha1_fingerprint": "de697a85494c32cb970c4b57cbe01855558f14c1",
+        "sha256_fingerprint": "f13c7496910337d9e8b7db2051d700fe87a3f2969707a3eabe8a972ae42cdcbf",
+        "signature_algorithm": "rsassa_pkcs1v15",
+        "subject": "Common Name: Fixture, Organizational Unit: Test, Organization: APK Sentinel, Locality: Nowhere, State/Province: NA, Country: XX"
+      }
+    ],
+    "is_signed": true,
+    "schemes": [
+      "v1",
+      "v2",
+      "v3"
+    ]
+  },
+  "url_evidence": {
+    "domains": [
+      "example.invalid"
+    ],
+    "urls": [
+      "https://example.invalid/api"
+    ]
+  }
+}

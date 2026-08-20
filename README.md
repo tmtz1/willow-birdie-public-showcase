@@ -10,7 +10,7 @@ This repository is a public overview of selected research and product work. The 
 
 ### [APK Sentinel — AI-agent APK triage](docs/apk-sentinel.md)
 
-A limited beta for bounded, static-only Android APK triage. The live x402 endpoint accepts one APK per paid job and returns a versioned JSON report without installing or executing the sample. Automated agents and human operators can use the API directly; a browser upload portal is not part of this release.
+A limited AI-agent beta for bounded, static-only Android APK triage. The live x402 endpoint accepts one APK per paid job and returns a versioned JSON report without installing or executing the sample.
 
 ## Evidence and validation
 

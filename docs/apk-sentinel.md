@@ -1,11 +1,5 @@
 # APK Sentinel
 
-## Product update — human-assisted API access
-
-APK Sentinel now has a human-assisted use path in addition to automated agent use. A person can submit an APK with a standard HTTP client such as `curl` or Postman, follow the x402 payment requirements, and poll the returned result. This is API access for a human operator—not a browser upload portal or a promise of unrestricted private-sample handling.
-
-The existing endpoint, price, Base Sepolia network, asynchronous `202 queued` workflow, static-analysis boundaries, and retention limits remain unchanged. Human operators should treat the returned report as triage evidence and review it before making decisions about an APK.
-
 ## AI-agent APK triage beta
 
 APK Sentinel is a limited AI-agent beta from Willow & Birdie Innovations. It provides bounded, static-only Android APK triage for automated services that need a repeatable first-pass report before deeper review.
@@ -52,13 +46,13 @@ Reports may include:
 - Automatic retries are disabled.
 - Worker concurrency is capped at one job.
 
-The report is triage evidence, not a proof that an APK is safe or malicious. The original beta brief described automated-service use; the product update above adds a human-assisted API path without adding a web upload portal.
+The report is triage evidence, not a proof that an APK is safe or malicious. Human/private APK intake is not part of the current public scope.
 
 ## Public/private boundary
 
 This repository contains documentation and sanitized evidence only. It does not contain production source code, private APK samples, proprietary detection logic, customer data, credentials, wallet keys, or deployment access.
 
-Agents and human operators can use the endpoint directly when they have the URL or receive it through an integration, referral, or technical brief.
+APK Sentinel is not currently listed on a Bazaar catalog. Agents can use the endpoint directly when they have the URL or receive it through an integration or referral.
 
 ## Contact
 

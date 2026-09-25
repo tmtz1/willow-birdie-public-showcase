@@ -20,6 +20,7 @@ Measured research on local model serving, structured output, latency, context re
 
 - [Model benchmark](docs/local-inference-benchmark.md)
 - [Chat and modality results](docs/local-inference-chat-results.md)
+- [GPT-5.6-SOL vs GPT-6-SOL code test](docs/benchmarks/gpt-sol-receipt-validation/README.md)
 
 ### RIVR
 

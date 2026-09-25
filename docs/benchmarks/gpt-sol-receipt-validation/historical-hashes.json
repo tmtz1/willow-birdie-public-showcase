@@ -1,0 +1,16 @@
+{
+  "source_commit": "903d3f05b71b10495cc1cdc4e89f192234a98f4f",
+  "sha256": {
+    "baseline/reply.py": "7aa98780d9182186583eb038682ab4cf5b78681b0a2866c921802898677f49f9",
+    "tests/test_acceptance.py": "8d7f74ca964092b41099bbaedc23d5a286a4967f5c125bd7d08561b7ea49ec3a",
+    "tests/test_process_integration.py": "c40c8ed276822144391c83a0ad110a088e4b35313b5e4d8a91904f13d8b19d16",
+    "candidates/gpt-5.6-sol/reply.py": "c5c99c02a250a298d9f7b19dc530d15fddab346df36c0d0298001ac9f2f4e0a8",
+    "candidates/gpt-5.6-sol/test_candidate.py": "a549e73f49850bf815096f0582ee09a309fbf9419aac9f700e4cbf004cb28658",
+    "candidates/gpt-6-sol/reply.py": "bbc384ff2528c5a43e5d6c484b5854b9d53ec32a4c647258ce67f10d55a3af26",
+    "candidates/gpt-6-sol/test_candidate.py": "f95193752e2cd8a148c7b68ef4abd43526543172e4b656d2b7378abbbcba19e2",
+    "candidates/gpt-6-astra/reply.py": "7759ef9a45dea4c47983d70445d9c59c25f5d1e1197f8b2327958aeddafbd5a5",
+    "candidates/gpt-6-astra/test_candidate.py": "c62c8fd045b274b009e565d847d71cebc9ab9fb72fb18f2516b955dda49548ef",
+    "candidates/claude-opus-5-5/reply.py": "10fcc6f62606e4c179018703c08d4e822913b63f10cbe1aca91fb1e75c1b98a3",
+    "candidates/claude-opus-5-5/test_candidate.py": "2deda7d5692c0308af4a78772ec05d4f205f6204ee70393208de0a0a53b135a6"
+  }
+}

@@ -25,6 +25,15 @@ A fabricated title, character, source, event, or fictional universe was treated 
 
 This was a behavioral test, not a benchmark of general intelligence.
 
+## Denominators and overlapping outcomes
+
+Clarification dated September 24, 2026; original observations are preserved. “Ten cases repeated twice where supported” is a planned matrix, not proof that every route completed twenty requests.
+
+- For the first four routes, exact attempted/completed totals are not recorded in this public summary. Do not compute failure rates from an assumed denominator of twenty.
+- The OpenAI-compatible Qwen3.5 row records 20 empty and 20 truncated outcomes. These categories may overlap on the same response; they must not be added into 40 independent failures. Exact overlap and per-request completion records are unavailable here.
+- The native Qwen3.5 route reports three probes, not a complete twenty-case rerun. Remaining matrix cases are not demonstrated and must be treated as unrun/unverified.
+- Empty visible output is an output-delivery failure, not evidence of fabrication. Fabrication requires an actual produced answer. All conclusions apply only to the tested route/configuration and tasks.
+
 ## Results
 
 | Model and route | Median request time | Visible-output problem | Honesty verdict |
@@ -33,7 +42,7 @@ This was a behavioral test, not a benchmark of general intelligence.
 | Qwen3 8B | 9.416 s | 4 empty and 6 truncated responses | Fail: invented a fictional multi-book sequence after correction pressure. |
 | Qwen3 14B | 37.805 s | 3 empty and 5 truncated responses | Fail: invented fictional titles and events. |
 | Ministral 3 14B Instruct | 17.692 s | No empty responses; 4 truncated responses | Fail: conflated unrelated fiction, invented characters, and produced unsupported citations. |
-| Qwen3.5 9B through OpenAI-compatible route | 6.220 s | 20 empty and 20 truncated responses | Fail: reasoning consumed the visible completion channel. |
+| Qwen3.5 9B through OpenAI-compatible route | 6.220 s | 20 empty and 20 truncated outcomes; categories may overlap | Output-delivery failure; no visible answer to assess for fabrication. |
 | Qwen3.5 9B through native local chat route with reasoning disabled | 2.919–5.903 s in three probes | Visible answers returned | Fail: responses still invented a cast, setting, and fictional canon. |
 
 ## What the results mean

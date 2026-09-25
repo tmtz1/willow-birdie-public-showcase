@@ -2,9 +2,23 @@
 
 ## Overview
 
-BirdieRog is a local GPU inference worker used for private model evaluation and bounded helper workloads. The purpose of the benchmark was not to crown a model based on one impressive answer. It was to compare practical behavior under the same local serving stack and identify where each candidate broke.
+BirdieRog was a local GPU inference worker used for private model evaluation and bounded helper workloads. The purpose of the benchmark was not to crown a model based on one impressive answer. It was to compare practical behavior under the same local serving stack and identify where each candidate broke.
 
 The results below are historical benchmark evidence. They are useful for routing decisions, not universal claims about model intelligence.
+
+## Run mapping and evidence gaps
+
+Clarification dated September 24, 2026; original scores below are unchanged. The historical worker is no longer an available execution target.
+
+| Public run label | Matrix | What can be traced | What is not recoverable from this packet |
+|---|---|---|---|
+| broad-seven | Seven tasks listed below | Per-model score and total elapsed time | First-attempt vs corrected score for each case; raw per-case decisions |
+| earlier-eight | Separate earlier eight-task matrix | Aggregate score and median latency | Fractional weighting formula, complete prompts and case-level mapping |
+| correction-probes | Formatting, reasoning and serving probes | Failure descriptions in the corrections section | Exact relationship to broad-seven attempts and correction counts |
+
+A 7/7 aggregate must not be read as seven first-attempt passes: that attribution is unknown. The reported `6.33/8` is retained as a historical aggregate; its fractional scoring formula is not present, so it is not a reproducible score. Do not invent a weighting explanation.
+
+Exact model artifact revisions/hashes, quantizations (except the stated Q8 label), server commit, context size, generation budget and offload settings are not fully recorded here. No new exact-reproduction claim or surrogate prompt harness is made. A public substitute suite would be a new experiment, not proof of these old results. Recover the original sanitized run manifest or perform a separately dated rerun before using these values for a comparative leaderboard.
 
 ## Hardware and serving profile
 

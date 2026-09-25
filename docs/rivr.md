@@ -1,5 +1,11 @@
 # RIVR
 
+## Plain-language overview
+
+RIVR explores recordings containing sensor streams: images, position data and 3D point clouds. Its goal is to help a researcher inventory what was captured, line streams up in time and inspect them without altering the source files.
+
+Here, ROVR/LightCone names the proprietary recording ecosystem under study. **RTCM** is a satellite-navigation correction-message format; **PCD** stores 3D point-cloud data; **GNSS** means satellite positioning; **IMU** measures motion. A claimed parser capability is not proof that every recording variant is understood.
+
 ## ROVR / LightCone research toolkit
 
 RIVR is a personal, local-first research project by Tmtz. It explores unsupported proprietary ROVR LightCone data and provides repeatable, read-only inspection and viewing workflows.
@@ -27,7 +33,7 @@ RIVR is designed for local processing. Source captures and generated reports are
 
 ## Status
 
-In development / research. Encrypted capture recovery is currently parked where the required device key is unavailable. The next research milestone is detection and segmentation annotation overlays.
+Status clarified September 24, 2026 from the existing public case study; the private implementation was not rerun. In development / research. Encrypted capture recovery is currently parked where the required device key is unavailable. The next research milestone is detection and segmentation annotation overlays.
 
 ## Related work
 

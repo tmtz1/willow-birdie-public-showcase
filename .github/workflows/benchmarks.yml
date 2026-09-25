@@ -1,0 +1,28 @@
+name: Offline benchmark checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  receipt-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python: ['3.12', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Verify frozen candidates, expected baseline failures and follow-up
+        working-directory: docs/benchmarks/gpt-sol-receipt-validation
+        run: |
+          python -m unittest test_verify -v
+          python verify.py --output benchmark-results.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results-python-${{ matrix.python }}
+          path: docs/benchmarks/gpt-sol-receipt-validation/benchmark-results.json

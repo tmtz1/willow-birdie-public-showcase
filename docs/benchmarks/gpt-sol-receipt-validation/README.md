@@ -2,6 +2,12 @@
 
 **The short version:** GPT-5.6-SOL, GPT-6-SOL, GPT-6-Astra, and Claude Opus 5.5 all fixed the same problem in an offline test. All four passed the same 30 checks. GPT-6-SOL finished fastest *in these single runs*. That is not proof that it is the best assistant for other work.
 
+## Cloud inference, local test execution
+
+These comparisons evaluate **cloud-hosted models**. Model inference occurred through OpenAI/Codex and Anthropic; the harness, generated code and offline acceptance tests executed locally. Local test execution does not make the models local.
+
+Exact model identifiers and access routes are below. Original reasoning-effort configuration and precise provider-run timestamps are not recorded in this public package; they are unknown, not inferred. The September 24, 2026 follow-up has a separate machine-readable [verification receipt](verification-2026-09-24.json), Python/platform metadata and [frozen source hashes](historical-hashes.json). It reproduces correctness checks only, not original inference timings or token receipts.
+
 ## What were they trying to fix?
 
 Imagine asking an assistant to post a reply. The sending program closes without an error. Did the reply actually get accepted? Not necessarily. Our small reply-helper program treated that clean exit as success, even if the program's confirmation was missing or wrong.
@@ -19,7 +25,7 @@ We asked each assistant to write checks that caught the bug, then gave it the fa
 
 All four assistants' checks *first failed on the original broken code*, then passed on their fixes. The original code failed 19 of the 30 shared checks; the four repaired versions passed them all.
 
-**What stands out?** On the common checks, this was a four-way tie for correctness. The only clear difference measured here was how long these particular runs took: GPT-6-SOL, then Astra, then Opus, then GPT-5.6-SOL. Claude wrote more of its own checks, but more checks do not automatically mean a better fix: the assistants chose different cases, and all four faced the same independent 30-check exam. GPT-6-SOL also used fewer reported main-model tokens than the other OpenAI/Codex runs; Claude's subscription reports cached work differently, so its token figures are not a clean head-to-head efficiency score.
+**What stands out?** On the original common checks, this was a four-way tie for correctness. Subsequent Python 3.12 deep-JSON hardening found an additional exception-contract difference between the SOL candidates; see [follow-up v1](followup-v1/README.md). The only clear difference measured here was how long these particular runs took: GPT-6-SOL, then Astra, then Opus, then GPT-5.6-SOL. Claude wrote more of its own checks, but more checks do not automatically mean a better fix: the assistants chose different cases, and all four faced the same independent 30-check exam. GPT-6-SOL also used fewer reported main-model tokens than the other OpenAI/Codex runs; Claude's subscription reports cached work differently, so its token figures are not a clean head-to-head efficiency score.
 
 ## What this does—and does not—show
 
@@ -50,5 +56,21 @@ for model in gpt-5.6-sol gpt-6-sol gpt-6-astra claude-opus-5-5; do
   PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="candidates/$model" python3 -m unittest discover -s "candidates/$model" -p 'test_candidate.py' -v
 done
 ```
+
+
+
+## Automated reproduction
+
+Run `python3.12 verify.py` from this directory. The harness explicitly expects 30 baseline tests with 19 failures, zero errors and zero skips; it fails on unexpected counts instead of hiding a broken baseline behind `|| true`. All four candidate suites and separate follow-up tests must pass. CI publishes a result artifact for each Python version. The committed receipt is a dated local result, not a claim that CI or provider calls were rerun at that time.
+
+## Prototype reuse limits
+
+- Duplicate-attempt memory is process-local and lost on restart; the set has no eviction policy.
+- A global lock serializes subprocess execution for unrelated events.
+- `capture_output=True` has no application-level byte cap.
+- An affirmative JSON receipt is not independent evidence of durable relay delivery.
+- Duplicate JSON keys are not explicitly rejected.
+
+These are production-hardening requirements outside the frozen receipt-validation experiment. No candidate is promoted to a deployed service by these checks.
 
 The baseline failing is expected; it proves these checks catch the original problem. The four candidate runs above should pass. This package is a transparent, sanitized demonstration—not the original private prompt, a live integration test, or a production release.
